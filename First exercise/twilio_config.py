@@ -78,13 +78,14 @@ def send_message(TWILIO_ACCOUNT_SID,TWILIO_AUTH_TOKEN,date,dolar_value,data):
 
   message = client.messages \
       .create(
-          from_='whatsapp:+14155238886',
+          from_='whatsapp:+141552####',
           body='\nHola! \n\n\n El precio de dolar hoy '+ date +' en  Mexico es ' + str(dolar_value) +' pesos.  Y aca el resumen de las cripto \n\n\n ' + str(data),
-          to='whatsapp:+5215574608539'
+          to='whatsapp:+521557460####'
       )
 
   return message.sid
 
+send_message(TWILIO_ACCOUNT_SID,TWILIO_AUTH_TOKEN,date,dolar_value,data)
 
 
 
